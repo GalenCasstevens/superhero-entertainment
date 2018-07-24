@@ -1,0 +1,92 @@
+<% include partials/header %>
+
+    <div class="container">
+        <div class="content">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <img class="float-left heroPoster" src="<%= entertainment.image %>" alt="">
+                    <div class="textContent">
+                        <% if(entertainment.rating == 10) { %>
+                        <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                        <% } else if(entertainment.rating >= 9) { %>
+                        <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </span>
+                        <% } else if(entertainment.rating >= 8) { %>
+                        <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                        <% } else if(entertainment.rating >= 7) { %>
+                        <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </span>
+                        <% } else if(entertainment.rating >= 6) { %>
+                        <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                        <% } else if(entertainment.rating >= 5) { %>
+                        <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </span>
+                        <% } else if(entertainment.rating >= 4) { %>
+                        <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </span>
+                        <% } else if(entertainment.rating >= 3) { %>
+                        <span class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half"></i>
+                    </span>
+                        <% } else if(entertainment.rating >= 2) { %>
+                        <span class="stars">
+                        <i class="fas fa-star"></i>
+                    </span>
+                        <% } else if(entertainment.rating >= 1) { %>
+                        <span class="stars">
+                        <i class="fas fa-star-half"></i>
+                    </span>
+                        <% } %>
+                        <p class="title"><%= entertainment.title %></p>
+                        <p>Release Date: <%= entertainment.releaseDate %></p>
+                        <p class="description">
+                            <%= entertainment.body %>
+                        </p>
+                        <div class="darkDiv buttonLinks float-right">
+                            <a class="btn btn-danger" href="/<%= entertainment._id %>/comments/new" role="button">Comment</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul class="list-group">
+                    <li class="list-group-item">
+                        <p><%= entertainment.comments %></p>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+<% include partials/footer %>

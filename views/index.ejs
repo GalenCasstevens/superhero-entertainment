@@ -1,0 +1,239 @@
+<% include partials/header %>
+    <div class="container">
+        <div class="content">
+            <ul class="list-group">
+                <% entertainments.forEach(function(entertainment) { %>
+                    <li class="list-group-item">
+                        <div>
+                            <img class="float-left heroPoster" src="<%= entertainment.image %>" alt="">
+                            <div class="textContent">
+                                <% if(entertainment.rating == 10) { %>
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                <% } else if(entertainment.rating >= 9) { %>
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half"></i>
+                                    </span>
+                                <% } else if(entertainment.rating >= 8) { %>
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                <% } else if(entertainment.rating >= 7) { %>
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half"></i>
+                                    </span>
+                                <% } else if(entertainment.rating >= 6) { %>
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                <% } else if(entertainment.rating >= 5) { %>
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half"></i>
+                                    </span>
+                                <% } else if(entertainment.rating >= 4) { %>
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                <% } else if(entertainment.rating >= 3) { %>
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half"></i>
+                                    </span>
+                                <% } else if(entertainment.rating >= 2) { %>
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                <% } else if(entertainment.rating >= 1) { %>
+                                    <span class="stars">
+                                        <i class="fas fa-star-half"></i>
+                                    </span>
+                                <% } %>
+                                <p class="title"><%= entertainment.title %></p>
+                                <p>Release Date: <%= entertainment.releaseDate %></p>
+                                <p class="description">
+                                    <%= entertainment.body %>
+                                </p>
+                                <div class="buttonLinks float-right">
+                                    <a class="btn btn-primary" href="/<%= entertainment._id %>/comments" role="button">Comments</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                <% }); %>
+                <!--<li class="list-group-item">-->
+                    <!--<div>-->
+                        <!--<img class="float-left heroPoster" src="https://i.pinimg.com/originals/a5/f4/19/a5f419e1017863e965fd6e1b30c26dcf.jpg" alt="">-->
+                        <!--<div class="textContent">-->
+                            <!--<span class="stars">-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                            <!--</span>-->
+                            <!--<p class="title">Spider-Man</p>-->
+                            <!--<p>Release Date: May 3, 2002</p>-->
+                            <!--<p class="description">-->
+                                <!--Peter Parker (Maguire), after being bitten by a genetically altered spider, becomes Spider-Man,-->
+                                <!--a hero of superhuman strength with the ability to cling to any surface. He dedicates himself to-->
+                                <!--a life of fighting crime, while living a double life as a superhero and working student. (Sony)-->
+                            <!--</p>-->
+                            <!--<div class="buttonLinks float-right">-->
+                                <!--<a class="btn btn-primary" href="/" role="button">Details</a>-->
+                                <!--<a class="btn btn-danger" href="/" role="button">Comment</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="list-group-item">-->
+                    <!--<div>-->
+                        <!--<img class="float-left heroPoster" src="http://cdn.wegotthiscovered.com/wp-content/uploads/2017/12/mviyLSA.jpg" alt="">-->
+                        <!--<div class="textContent">-->
+                            <!--<span class="stars">-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star-half"></i>-->
+                            <!--</span>-->
+                            <!--<p class="title">The Incredible Hulk</p>-->
+                            <!--<p>Release Date: June 13, 2008</p>-->
+                            <!--<p class="description">-->
+                                <!--The Incredible Hulk kicks off an all-new, explosive and action-packed epic of one of the most-->
+                                <!--popular Super Heroes of all time. In the film, scientist Bruce Banner desperately hunts for a-->
+                                <!--cure to the gamma radiation that poisoned his cells and unleashes the unbridled force of rage-->
+                                <!--within him: The Hulk. Living in the shadows—cut off form a life he knew and the woman he loves,-->
+                                <!--Betty Ross—Banner struggles to avoid the obsessive pursuit of his nemesis, General Thunderbolt-->
+                                <!--Ross and the military machinery that seeks to capture him and brutally exploit his power. As-->
+                                <!--all three grapple with the secrets that led to The Hulk’s creation, they are confronted with a-->
+                                <!--monstrous new adversary known as the Abomination, whose destructive strength exceeds even The-->
+                                <!--Hulk’s own. (Universal Studios)-->
+                            <!--</p>-->
+                            <!--<div class="buttonLinks float-right">-->
+                                <!--<a class="btn btn-primary" href="/" role="button">Details</a>-->
+                                <!--<a class="btn btn-danger" href="/" role="button">Comment</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="list-group-item">-->
+                    <!--<div>-->
+                        <!--<img class="float-left heroPoster" src="https://images-na.ssl-images-amazon.com/images/I/41W4a4oxfDL.jpg" alt="">-->
+                        <!--<div class="textContent">-->
+                            <!--<span class="stars">-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                            <!--</span>-->
+                            <!--<p class="title">Batman Begins</p>-->
+                            <!--<p>Release Date: June 15, 2005</p>-->
+                            <!--<p class="description">-->
+                                <!--Christopher Nolan's Batman Begins explores the origins of the Batman legend and the Dark Knight's-->
+                                <!--emergence as a force for good in Gotham. [Warner Bros.]-->
+                            <!--</p>-->
+                            <!--<div class="buttonLinks float-right">-->
+                                <!--<a class="btn btn-primary" href="/" role="button">Details</a>-->
+                                <!--<a class="btn btn-danger" href="/" role="button">Comment</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="list-group-item">-->
+                    <!--<div>-->
+                        <!--<img class="float-left heroPoster" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/04eafb25626631.5634844b7293f.jpg" alt="">-->
+                        <!--<div class="textContent">-->
+                            <!--<span class="stars">-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                            <!--</span>-->
+                            <!--<p class="title">Deadpool</p>-->
+                            <!--<p>Release Date: February 12, 2016</p>-->
+                            <!--<p class="description">-->
+                                <!--Based upon the Marvel Comics anti-hero, Deadpool is the origin story of former Special Forces operative-->
+                                <!--turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves him with-->
+                                <!--accelerated healing powers, adopts the alter ego Deadpool. Armed with new abilities and a dark and twisted-->
+                                <!--sense of humor, Deadpool hunts down the man who nearly destroyed his life. [20th Century Fox]-->
+                            <!--</p>-->
+                            <!--<div class="buttonLinks float-right">-->
+                                <!--<a class="btn btn-primary" href="/" role="button">Details</a>-->
+                                <!--<a class="btn btn-danger" href="/" role="button">Comment</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="list-group-item">-->
+                    <!--<div>-->
+                        <!--<img class="float-left heroPoster" src="https://images-na.ssl-images-amazon.com/images/I/31UiPirP4GL.jpg" alt="">-->
+                        <!--<div class="textContent">-->
+                            <!--<span class="stars">-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                            <!--</span>-->
+                            <!--<p class="title">Iron Man</p>-->
+                            <!--<p>Release Date: May 2, 2008</p>-->
+                            <!--<p class="description">-->
+                                <!--Tony Stark is a billionaire industrialist and genius inventor who is kidnapped and forced to build a-->
+                                <!--devastating weapon. Instead, using his intelligence and ingenuity, Tony builds a high-tech suit of-->
+                                <!--armor and escapes captivity. When he uncovers a nefarious plot with global implications, he dons his-->
+                                <!--powerful armor and vows to protect the world as Iron Man. [Paramount Pictures, Marvel Studios]-->
+                            <!--</p>-->
+                            <!--<div class="buttonLinks float-right">-->
+                                <!--<a class="btn btn-primary" href="/" role="button">Details</a>-->
+                                <!--<a class="btn btn-danger" href="/" role="button">Comment</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="list-group-item">-->
+                    <!--<div>-->
+                        <!--<img class="float-left heroPoster" src="https://images-na.ssl-images-amazon.com/images/I/71gyLVWIfIL._SY606_.jpg" alt="">-->
+                        <!--<div class="textContent">-->
+                            <!--<span class="stars">-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                                <!--<i class="fas fa-star"></i>-->
+                            <!--</span>-->
+                            <!--<p class="title">Doctor Strange</p>-->
+                            <!--<p>Release Date: November 4, 2016</p>-->
+                            <!--<p class="description">-->
+                                <!--After a tragic car accident, talented neurosurgeon Doctor Stephen Strange (Benedict Cumberbatch) must put-->
+                                <!--ego aside and learn the secrets of a hidden world of mysticism and alternate dimensions. Based in New York-->
+                                <!--City's Greenwich Village, Doctor Strange must act as an intermediary between the real world and what lies-->
+                                <!--beyond, utilizing a vast array of metaphysical abilities and artifacts to protect the Marvel Cinematic-->
+                                <!--Universe.-->
+                            <!--</p>-->
+                            <!--<div class="buttonLinks float-right">-->
+                                <!--<a class="btn btn-primary" href="/" role="button">Details</a>-->
+                                <!--<a class="btn btn-danger" href="/" role="button">Comment</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+<% include partials/footer %>

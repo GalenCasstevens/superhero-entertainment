@@ -1,0 +1,24 @@
+<% include partials/header %>
+    
+    <div class="container">
+        <div class="content">
+            <ul class="list-group">
+                <li class="list-group-item"><h3>New Comment</h3></li>
+                <li class="list-group-item">
+                    <form action="/<%= entertainment._id %>/comments" method="POST">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <textarea name="comment[name]" class="form-control" id="username" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comment</label>
+                            <textarea name="comment[body]" class="form-control" id="comment" rows="4"></textarea>
+                        </div>
+                        <button class="btn btn-success" type="submit">Submit</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<% include partials/footer %>

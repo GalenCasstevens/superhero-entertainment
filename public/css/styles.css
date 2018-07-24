@@ -1,0 +1,80 @@
+body {
+    /*background-image: url("https://wallpaper-house.com/data/out/10/wallpaper2you_397810.jpg");*/
+    background-image: url("https://newevolutiondesigns.com/images/freebies/new-york-manhattan.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Oswald',"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+@font-face {
+    font-family: heroFont;
+    src: url(../fonts/badabb__.ttf);
+}
+.navbar-dark .navbar-brand {
+    color: #ffed10;
+    font-size: 1.6em;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffed10;
+    /*font-size: 1.1em;*/
+}
+.bg-dark {
+    background-color: #262626!important;
+}
+.logo {
+    width: 37px;
+    float: left;
+    padding-top: 4px;
+}
+.heroPoster {
+    width: 150px;
+}
+.list-group li {
+    background-color: #262626;
+}
+.list-group-item {
+    border-color: #101010;
+    color: #FFF;
+}
+img {
+    float: left;
+    /*vertical-align: middle;*/
+}
+.content {
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+.navbar-brand {
+    font-family: heroFont;
+}
+.title {
+    font-weight: bold;
+    font-family: 'Oswald',"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.textContent {
+    padding-left: 175px;
+    font-family: 'Oswald',"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.stars {
+    float: right;
+    color: #ffed10;
+}
+.btn-primary {
+    margin-right: 5px;
+}
+.heroDetails {
+    background-color: #262626;
+    margin-top: 25px;
+    color: #FFFFFF;
+}
+.card {
+    margin-top: 25px;
+}
+/*.form-group {*/
+    /*background-color: #262626;*/
+    /*color: #FFF;*/
+    /*padding: 10px;*/
+    /*border: 2px solid #000;*/
+    /*border-radius: 15px;*/
+    /*-moz-border-radius: 15px;*/
+/*}*/

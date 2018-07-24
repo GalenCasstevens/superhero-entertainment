@@ -1,0 +1,1 @@
+mongod --dbpath C:/Users/Galen/Desktop/Node.js/superhero-movies-and-shows/data/db
